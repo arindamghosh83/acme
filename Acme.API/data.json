@@ -1,0 +1,29 @@
+[
+  {
+    "type": "car",
+    "state": {
+      "fluid_levels": "low",
+      "engine_temperature": "hot",
+      "tire_pressure": "normal",
+      "location": "abcd"
+    }
+  },
+  {
+    "type": "car",
+    "state": {
+      "fluid_levels": "high",
+      "engine_temperature": "mild",
+      "tire_pressure": "normal",
+      "location": "xyz"
+    }
+  },
+  {
+    "id": "60367be0bc3910b2afb464c7",
+    "state": {
+      "fluid_levels": "low",
+      "engine_temperature": "high",
+      "tire_pressure": "normal",
+      "location": "xyz"
+    }
+  }
+]
