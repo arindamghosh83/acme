@@ -1,24 +1,18 @@
 version: '3.7'
 
 services:
-
   devicedb:
     container_name: devicedb
     restart: always
-    volumes:
-      - ${WEBAPP_STORAGE_HOME}/site:/data/db
     ports:
-      - "27017:27017"
+      - '27017:27017'
 
   acmeapi:
     container_name: acmeapi
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - "DeviceDatabaseSettings:ConnectionString=mongodb://devicedb:27017"
+      - 'DeviceDatabaseSettings:ConnectionString=mongodb://devicedb:27017'
     depends_on:
       - devicedb
-    volumes:
-      - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
-      - ${HOME}/.aspnet/https/:/root/.aspnet/https/
     ports:
-      - "8001:8090"
+      - '8000:8090'
